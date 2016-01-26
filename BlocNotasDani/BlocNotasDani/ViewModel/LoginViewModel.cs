@@ -76,9 +76,10 @@ namespace BlocNotasDani.ViewModel
         private async void NuevoUsuario()
         {
             // await _navigator.PopToRootAsync();
-            await _navigator.PushModalAsync<RegistroViewModel>(viewModel =>
+            await _navigator.PushAsync<RegistroViewModel>(viewModel =>
             {
                 viewModel.Titulo = "Nuevo Usuario";
+                
             });
         }
 

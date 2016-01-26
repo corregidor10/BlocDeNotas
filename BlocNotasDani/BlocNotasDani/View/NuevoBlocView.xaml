@@ -7,7 +7,7 @@
   <StackLayout>
     <Label Text="Nombre" VerticalOptions="Center" HorizontalOptions="Center"></Label>
     <Entry Text="{Binding Bloc.Nombre}"></Entry>
-    <Button Text="Guardar" Command="{Binding CmdGuardar}" BackgroundColor="Green" TextColor="Transparent" ></Button>
+    <Button Text="Guardar" Command="{Binding CmdGuardar}" BackgroundColor="Gray" TextColor="Black" ></Button>
   </StackLayout>
   
   

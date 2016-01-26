@@ -47,13 +47,15 @@ namespace BlocNotasDani.ViewModel
            await _servicio.AddBloc(Bloc);
 
             Blocs.Add(Bloc);
+
             
-            //await _navigator.PushModalAsync
-            //    <PrincipalViewModel>(viewModel =>
-            //    {
-            //        viewModel.Titulo = "Principal";
-            //        viewModel.Blocs = new ObservableCollection<Bloc>();
-            //    });
+            await _navigator.PopToRootAsync();
+            await _navigator.PushAsync<PrincipalViewModel>(viewModel =>
+            {
+                viewModel.Titulo = "Pagina de inicio";
+                viewModel.Blocs = new ObservableCollection<Bloc>(Blocs);
+
+            });
         }
     }
 }
