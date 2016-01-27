@@ -8,9 +8,9 @@
  <StackLayout Orientation="Vertical">
     <!--toda la info de esta pantalla está bindeada por un viewmodel, que tenemos pendiente de crear-->
   <Label Text="{Binding TituloLogin}"></Label>  
-    <Entry Text="{Binding Usuario.Login}"></Entry>
+    <Entry Placeholder=" Ej. dani" Text="{Binding Usuario.Login}"></Entry>
     <Label Text="{Binding TituloPassword}"></Label>
-    <Entry Text="{Binding Usuario.Password}"></Entry>
+    <Entry Placeholder="Ej. dani" IsPassword="True" Text="{Binding Usuario.Password}"></Entry>
    
     <StackLayout Orientation="Horizontal">
       <Button Text="{Binding TituloIniciar}" Command="{Binding cmdLogin}"></Button>
